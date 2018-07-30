@@ -1,0 +1,115 @@
+﻿
+.nums {
+    width: auto;
+    height: auto;
+    padding: 2px 2px;
+    border-radius: 3px;
+    background-color: rgba(8,24,50,0.5);
+    box-sizing: border-box;
+    height: auto;
+    display: inline-block;
+    color: #B93434;
+}
+
+.n {
+    overflow: hidden;
+    display: block;
+    float: left;
+    height: auto;
+    margin: 0px;
+    position: relative;
+    box-sizing: border-box;
+    width: 18px;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 1px 1px;
+}
+
+    .n .n-slider {
+        top: 0%;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        height: auto;
+        border-spacing: 0 2px;
+        transition: all ease-in-out 0.5s;
+        /*background-color: rgba(8,24,50,0.5);*/
+    }
+
+        .n .n-slider > i {
+            height: auto;
+            display: block;
+            padding: 1px;
+        }
+
+            .n .n-slider > i > i {
+                text-align: center;
+                box-sizing: border-box;
+                border-radius: 4px;
+                background-color: white;
+                display: block;
+                /*vertical-align: middle;*/
+                font-style: normal;
+                position: relative;
+            }
+
+    .n.n0 .n-slider {
+        top: 0%;
+    }
+
+    .n.n1 .n-slider {
+        top: -100%;
+    }
+
+    .n.n2 .n-slider {
+        top: -200%;
+    }
+
+    .n.n3 .n-slider {
+        top: -300%;
+    }
+
+    .n.n4 .n-slider {
+        top: -400%;
+    }
+
+    .n.n5 .n-slider {
+        top: -500%;
+    }
+
+    .n.n6 .n-slider {
+        top: -600%;
+    }
+
+    .n.n7 .n-slider {
+        top: -700%;
+    }
+
+    .n.n8 .n-slider {
+        top: -800%;
+    }
+
+    .n.n9 .n-slider {
+        top: -900%;
+    }
+
+.no-float {
+    float: none;
+}
+
+.nums-red .n .n-slider > i > i {
+    background-color: #f36c59;
+    color: white;
+}
+.nums-green .n .n-slider > i > i {
+    background-color: #289e88;
+    color: white;
+}
+.nums-blue .n .n-slider > i > i {
+    background-color: #1a62da;
+    color: white;
+}
+.nums-yellow .n .n-slider > i > i {
+    background-color: #d2890b/*#ed9c0f*/;
+    color: white;
+}

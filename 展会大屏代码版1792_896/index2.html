@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sarnath</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/highcharts.css"> -->
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+	<link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/jQuery.slideNumber.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/site.css">
+
+</head>
+<body>
+
+	<!-- 头部 -->
+  <div class="top1 pos_ab">
+        <canvas id="top1"  style=""></canvas>
+        <div class="leftTitle pos_ab">东西南北中&emsp;五条支线&emsp;共同发展</div>
+        <div class="mainTitle pos_ab"><img src="./images/title.png"></div>
+        <div class="rightTitle pos_ab">东西南北中&emsp;五条支线&emsp;共同发展</div>
+  </div>
+
+	<div class="firstPage pos_ab" style="opacity:1;">
+		<div class="lineName pos_ab">
+			萨纳斯区域布局：
+			<div class="creatName"></div>
+		</div>
+		<div class="first_center1 pos_ab">
+			<img src="./images/0.png" alt="" class="map0 fpMap">
+			<img src="./images/1.png" alt="" class="map1 fpMap pos_ab animated pulse" style="display:none;">
+			<img src="./images/2.png" alt="" class="map2 fpMap pos_ab animated pulse" style="display:none;">
+			<img src="./images/3.png" alt="" class="map3 fpMap pos_ab animated pulse" style="display:none;">
+			<img src="./images/4.png" alt="" class="map4 fpMap pos_ab animated pulse" style="display:none;">
+			<img src="./images/5.png" alt="" class="map5 fpMap pos_ab animated pulse" style="display:none;">
+		</div>
+
+		<div class="first_left1 pos_ab">
+			<div class="chartTitle pos_ab">健康度</div>
+			<div class="underLine"></div>
+			<div class="chartContainer pos_ab" id="first_left1_con" style="width:96%;left:2%;height:83%;top:11%;">
+
+			</div>
+		</div>
+		<div class="first_left2 pos_ab">
+			<div class="chartTitle pos_ab">MW发电量</div>
+			<div class="underLine"></div>
+			<div class="chartContainer pos_ab" id="first_left2_con" style="width:96%;left:2%;height:83%;top:11%;">
+
+			</div>
+		</div>
+		<div class="first_right1 pos_ab">
+			<div class="chartTitle pos_ab">清洗收益</div>
+			<div class="underLine"></div>
+			<div class="chartContainer pos_ab" id="first_right1_con" style="width:96%;left:2%;height:83%;top:11%;">
+
+			</div>
+		</div>
+		<div class="first_right2 pos_ab">
+			<div class="chartTitle pos_ab">社会贡献</div>
+			<div class="underLine"></div>
+			<div class="chartContainer pos_ab" id="first_right2_con" style="width:94%;left:2%;height:83%;top:14%;">
+				<div style="height:33.3%;">
+		          <div style="width:28%;float: left;height: 100%;position: relative;">
+		            <img src="./images/煤炭生产.png">
+		          </div>
+		          <div class="center6Item" style="width:36%;float: left;height: 100%;">
+		            <p>日节煤量</p>
+		            <p class="data-coal" ><span style="color:#1296DB;">--</span>吨</p>
+		          </div>
+		          <div class="center6Item" style="width:36%;float: left;height: 100%;">
+		            <p>总节煤量</p>
+		            <p class="data-total-coal"><span style="color:#1296DB;">--</span>吨</p>
+		          </div>
+		        </div>
+
+		        <div style="height:33.3%;">
+		          <div style="width:28%;float: left;height: 100%;position: relative;">
+		            <img src="./images/co2.png">
+		          </div>
+		          <div class="center6Item" style="width:36%;float: left;height: 100%;">
+		            <p>日减排CO2</p>
+		            <p class="data-co2" ><span style="color:#33CC00;">--</span>吨</p>
+		          </div>
+		          <div class="center6Item" style="width:36%;float: left;height: 100%;">
+		            <p>总减排CO2</p>
+		            <p class="data-total-co2"><span  style="color:#33CC00;">--</span>吨</p>
+		          </div>
+		        </div>
+
+		        <div style="height:33.3%;">
+		          <div style="width:28%;float: left;height: 100%;position: relative;">
+		            <img src="./images/tree.png">
+		          </div>
+		          <div class="center6Item" style="width:36%;float: left;height: 100%;">
+		            <p>日等效植树</p>
+		            <p class="data-tree" ><span style="color:#009900;">--</span>棵</p>
+		          </div>
+		          <div class="center6Item" style="width:36%;float: left;height: 100%;">
+		            <p>总等效植树</p>
+		            <p class="data-total-tree" ><span style="color:#009900;">--</span>棵</p>
+		          </div>
+		        </div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="secondPage pos_ab" style="opacity:0;">
+
+		<!-- 中间 -->
+		<div class="showcaseContainer pos_ab">
+				<div class="bottomCircleContainer pos_ab">
+					<div class="bottomCircle  pos_ab">
+							<div class="bottomCircleInner1">
+
+							</div>
+							<div class="bottomCircleInner2">
+									<img src="./images/hx.png" alt="" class="hx">
+
+							</div>
+							<div class="bottomCircleInner3"></div>
+					</div>
+				</div>
+
+				<div class="showSubInfoContainer pos_ab">
+						<!-- <div class="centerLeft1 pos_ab">
+								<div class="eastLine line">
+									<div class="stationPic">
+										<img src="./images/东线电站.png" alt="">
+									</div>
+									<div class="cont3" style="color:green;">东线战略概述</div>
+									<div class="cont4" >
+										青岛作为管控总部，可<span class="marked">精细化</span>辐射至整个山东省光伏项目。东线战略以青岛作为起点，在此区域已进行<span class="marked">全类型项目</span>管控，包括大型地面电站、农光互补、渔光互补、村镇扶贫项目、户用光伏、工商业屋顶等。同时，在该区域设有全国性的电站管控培训学校，除将在此区域持续深挖，吸纳更多类型电站项目进驻之外，还将电站<span class="marked">管控人才培养</span>纳入蓝图
+									</div>
+								</div>
+						</div>
+						<div class="centerRight1Title pos_ab">
+								东线电站（73个）
+						</div>
+						<div class="centerRight1 pos_ab">
+								<div class="eastLine line eastLineTable lineTable">
+
+								</div>
+						</div> -->
+						<div class="centerRight2 pos_ab">
+								<div class="nSlogan slogan">
+									<div class="slogan1 animated zoomIn"><span class="contTitle">北线战略：</span>大型项目&emsp;高效管控</div>
+									<div class="slogan2 animated zoomIn">
+										<span class="contTitle">管控区域：</span>黑龙江、吉林、辽<br/>&emsp;&emsp;&emsp;&emsp;&ensp;宁、内蒙古、甘肃
+									</div>
+								</div>
+								<div class="eSlogan slogan">
+									<div class="slogan1 animated zoomIn"><span class="contTitle">东线战略：</span>总部辐射&emsp;形式多样</div>
+									<div class="slogan2 animated zoomIn">
+										<span class="contTitle">管控区域：</span>青岛、威海、菏泽、<br/>&emsp;&emsp;&emsp;&emsp;&ensp;德州、聊城、肥城、<br/>&emsp;&emsp;&emsp;&emsp;&ensp;寿光
+									</div>
+								</div>
+								<div class="cSlogan slogan">
+									<div class="slogan1 animated zoomIn"><span class="contTitle">中线战略：</span>多点标杆&emsp;品质管控</div>
+									<div class="slogan2 animated zoomIn">
+										<span class="contTitle">管控区域：</span>河北、天津、安徽、<br/>&emsp;&emsp;&emsp;&emsp;&ensp;陕西、山西、湖北、<br/>&emsp;&emsp;&emsp;&emsp;&ensp;湖南
+									</div>
+								</div>
+								<div class="wSlogan slogan">
+									<div class="slogan1 animated zoomIn"><span class="contTitle">西线战略：</span>因地制宜&emsp;集中管控</div>
+									<div class="slogan2 animated zoomIn">
+										<span class="contTitle">管控区域：</span>云南、贵州、四川
+									</div>
+								</div>
+								<div class="sSlogan slogan">
+									<div class="slogan1 animated zoomIn"><span class="contTitle">南线战略：</span>深挖扶贫&emsp;海外扩张</div>
+									<div class="slogan2 animated zoomIn">
+										<span class="contTitle">管控区域：</span>福建、广东、海南
+									</div>
+								</div>
+						</div>
+						<div class="centerTop1 pos_ab">
+								<div class="eastLine line pos_ab">
+									<div class="tit" style="color:#18F2F9;">东线</div>
+									<div class="cont2">
+										<span class="">装机容量：1.08GW</span>
+									</div>
+									<div class="cont1">
+
+									</div>
+								</div>
+
+								<div class="northLine line pos_ab">
+									<div class="tit" style="color:#18F2F9;">北线</div>
+									<div class="cont2">
+										<span class="">装机容量：756MW</span>
+									</div>
+									<div class="cont1">
+									</div>
+								</div>
+
+								<div class="centerLine line pos_ab">
+									<div class="tit" style="color:#18F2F9;">中线</div>
+									<div class="cont2">
+										<span class="">装机容量：1.29GW</span>
+									</div>
+									<div class="cont1">
+									</div>
+								</div>
+
+								<div class="westLine line pos_ab">
+									<div class="tit" style="color:#18F2F9;">西线</div>
+									<div class="cont2">
+										<span class="">装机容量：200MW</span>
+									</div>
+									<div class="cont1">
+									</div>
+								</div>
+
+								<div class="southLine line pos_ab">
+									<div class="tit" style="color:#18F2F9;">南线</div>
+									<div class="cont2">
+											<span class="">装机容量：300MW</span>
+									</div>
+									<div class="cont1">
+									</div>
+								</div>
+
+						</div>
+				</div>
+
+				<div id="showcase" class="noselect pos_ab">
+					<div class="showSubMapContainer pos_ab">
+						<div class="showSubMap pos_ab">
+							<div class="rotateCir1 pos_ab" style="z-index:100;">
+								<img src="images/hx2.png" class="" style="z-index:1001;">
+								<img src="./images/阴影.png" alt="" class="yy pos_ab">
+							</div>
+							<div class="showSubMapInner pos_ab" style="z-index:1000;">
+								<div class="tagBall eastMap_slogan">
+									<div class="tag">实时报警</div>
+									<div class="tag">分析预警</div>
+									<div class="tag">高效管控</div>
+									<div class="tag">大数据分析</div>
+									<div class="tag">全程运维</div>
+
+								</div>
+
+								<img src="images/111.png" alt="" class="map000 map111 animated pos_ab">
+								<img src="images/222.png" alt="" class="map000 map222 animated pos_ab">
+								<img src="images/333.png" alt="" class="map000 map333 animated pos_ab">
+								<img src="images/444.png" alt="" class="map000 map444 animated pos_ab">
+								<img src="images/555.png" alt="" class="map000 map555 animated pos_ab">
+
+
+								<img src="images/东线地图1.png" alt="" class="eastMap submap animated zoomOutDown">
+								<img src="images/北线地图1.png" alt="" class="northMap submap animated zoomOutDown">
+								<img src="images/中线地图1.png" alt="" class="centerMap submap animated zoomOutDown">
+								<img src="images/西线地图1.png" alt="" class="westMap submap animated zoomOutDown">
+								<img src="images/南线地图1.png" alt="" class="southMap submap animated zoomOutDown">
+							</div>
+
+						</div>
+					</div>
+
+					<!-- <div class="card">
+						<img src="images/全国地图1.png">
+						<h3>全国</h3>
+					</div> -->
+					<div class="card">
+						<img src="images/东线地图.png">
+						<h3>东线</h3>
+					</div>
+					<div class="card">
+						<img src="images/北线地图.png">
+						<h3>北线</h3>
+					</div>
+					<div class="card">
+						<img src="images/中线地图.png">
+						<h3>中线</h3>
+					</div>
+					<div class="card">
+						<img src="images/西线地图.png">
+						<h3>西线</h3>
+					</div>
+					<div class="card">
+						<img src="images/南线地图.png">
+						<h3>南线</h3>
+					</div>
+				</div>
+		</div>
+
+		<!-- 左1 -->
+		<div class="left1 pos_ab">
+			<canvas id="left1" class="pos_ab"  style=""></canvas>
+			<!-- <img src="./images/itemTitle.png" alt="" class="pos_ab itemTitle"> -->
+			<div class="chartTitle pos_ab">发电情况</div>
+			<div class="underLine"></div>
+			<div class="chartContainer pos_ab" id="left1_con" style="width:92%;left:4%;">
+				<div class="kwh-box">
+					<p class="kwh-lbl text-center bg1" style="text-align: center;">日发电量<small>（MWh）</small></p>
+					<div class="numOuter">
+						<div id="kwh_day" class="nums-red text-center"></div>
+					</div>
+
+				</div>
+				<div class="kwh-box">
+					<p class="kwh-lbl text-center" style="text-align: center;">月发电量<small>（MWh）</small></p>
+					<div class="numOuter">
+						<div id="kwh_month" class="nums-blue"></div>
+
+					</div>
+				</div>
+				<div class="kwh-box">
+					<p class="kwh-lbl text-center" style="text-align: center;">年发电量<small>（MWh）</small></p>
+					<div class="numOuter">
+						<div id="kwh_year" class="nums-green"></div>
+
+					</div>
+				</div>
+				<div class="kwh-box">
+					<p class="kwh-lbl text-center" style="text-align: center;">总发电量<small>（MWh）</small></p>
+					<div class="numOuter">
+						<div id="kwh_total" class="nums-yellow"></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 左2 -->
+		<div class="left2 pos_ab">
+			<canvas id="left2" class="pos_ab"  style=""></canvas>
+			<!-- <img src="./images/itemTitle.png" alt="" class="pos_ab itemTitle"> -->
+			<div class="chartTitle pos_ab">故障分析</div>
+			<div class="underLine"></div>
+			<div class="chartContainer pos_ab" id="left2_con" style="top:10%;height:88%;width:96%;left:2%;"></div>
+		</div>
+		<!-- 左3 -->
+		<div class="left3 pos_ab">
+			<canvas id="left3" class="pos_ab"  style=""></canvas>
+			<!-- <img src="./images/itemTitle.png" alt="" class="pos_ab itemTitle"> -->
+			<div class="chartTitle pos_ab">多方位报警</div>
+			<div class="underLine"></div>
+			<div class="chartContainer pos_ab" id="left3_con" style="overflow: hidden;top:7.5%;height:92.5%;width:92%;left:4%;">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="onceConnectionTitle" style="text-align: left;padding-left:40px;padding-top:10px;">
+							方阵
+						</div>
+						<div class="onceConnection" style="padding-top:10px;">
+
+							<div class="ng-scope">
+								<div class="end center"></div>
+							</div>
+
+							<div class="ng-scope">
+								<div class="seperator center round">
+									<div class="left_half"></div>
+									<div class="right_half"></div>
+								</div>
+							</div>
+
+							<div class="ng-scope">
+								<div class="inverter center " ng-click="inverterClick(p)">
+									<div class="left_half"></div>
+									<div class="right_half"></div>
+									<div class="left_content">
+										<div><span class="name ng-binding" id="device_86_Device_Name" ng-bind="p.DeviceName">2#光伏区2#逆变器</span><span ng-bind="p.AlarmInfo" class="ng-binding"></span></div>
+										<div><span>Ia:</span><span id="device_86_ACurrent" ng-bind="p.DeviceData.ACurrent.toFixed(1)" class="ng-binding">94.0</span><span>A</span></div>
+										<div><span>Ib:</span><span id="device_86_BCurrent" ng-bind="p.DeviceData.BCurrent.toFixed(1)" class="ng-binding">94.0</span><span>A</span></div>
+										<div><span>Ic:</span><span id="device_86_CCurrent" ng-bind="p.DeviceData.CCurrent.toFixed(1)" class="ng-binding">94.0</span><span>A</span></div>
+										<div><span>P[dc]:</span><span id="device_86_DCPower" ng-bind="p.DeviceData.DCPower.toFixed(1)" class="ng-binding">53.0</span><span>kW</span></div>
+									</div>
+									<div class="right_content">
+										<div class="model"><span id="device_86_Model" ng-bind="p.Model" class="ng-binding"></span></div>
+										<div><span>Ua:</span><span id="device_86_AVoltage" ng-bind="p.DeviceData.AVoltage.toFixed(2)" class="ng-binding">185.16</span><span>V</span></div>
+										<div><span>Ub:</span><span id="device_86_BVoltage" ng-bind="p.DeviceData.BVoltage.toFixed(2)" class="ng-binding">184.81</span><span>V</span></div>
+										<div><span>Uc:</span><span id="device_86_CVoltage" ng-bind="p.DeviceData.CVoltage.toFixed(2)" class="ng-binding">184.81</span><span>V</span></div>
+										<div><span>P:</span><span id="device_86_TActivePower" ng-bind="p.DeviceData.TActivePower.toFixed(2)" class="ng-binding">52.00</span><span>kW</span></div>
+										<div><span>T:</span><span id="device_86_TransformerTemperature" ng-bind="p.DeviceData.TransformerTemperature" class="ng-binding"></span><span>℃</span></div>
+									</div>
+								</div>
+								<div class="ground center ">
+								</div>
+							</div>
+							<div class="ng-scope">
+								<table class="dcbus center">
+									<tbody><tr class="boxes" style="display: table-row;position:relative;">
+										<td style="width:300px;border-top: 2px solid #0CB600;background-color:rgba(0,0,0,0);position:absolute;left:45px;"></td>
+										<!-- ngRepeat: (index,q) in p.sub --><td class="conv ng-scope" ng-repeat="(index,q) in p.sub" ng-click="convClick(q)">
+										<div class="road1">
+											<img src="./images/Connection/conv.png" alt="" class="road1Img pos_ab">
+											<span class="name ng-binding" id="device_93_Device_Name" ng-bind="q.DeviceName">1#汇流箱</span>
+										</div>
+										<div class="roads" id="device_93_Roads">
+											<!-- ngRepeat: r in searchRoads(q) --><div class="road ng-scope Road" ng-class="getCurrentClass(q,r)" ng-repeat="r in searchRoads(q)">
+											<span id="device_93_CurrentNo14" ng-bind="getCurrent(q,r)" class="ng-binding">0.7</span>A
+										</div><!-- end ngRepeat: r in searchRoads(q) --><div class="road ng-scope Road" ng-class="getCurrentClass(q,r)" ng-repeat="r in searchRoads(q)">
+											<span id="device_93_CurrentNo15" ng-bind="getCurrent(q,r)" class="ng-binding">0.8</span>A
+										</div><!-- end ngRepeat: r in searchRoads(q) --><div class="road ng-scope road_zero" ng-class="getCurrentClass(q,r)" ng-repeat="r in searchRoads(q)">
+											<span id="device_93_CurrentNo16" ng-bind="getCurrent(q,r)" class="ng-binding">0.0</span>A
+										</div><!-- end ngRepeat: r in searchRoads(q) -->
+									</div>
+								</td><!-- end ngRepeat: (index,q) in p.sub --><td class="conv ng-scope" ng-repeat="(index,q) in p.sub" ng-click="convClick(q)">
+									<div class="road1">
+										<img src="./images/Connection/conv.png" alt="" class="road1Img pos_ab">
+										<span class="name ng-binding" id="device_94_Device_Name" ng-bind="q.DeviceName">2#汇流箱</span>
+									</div>
+									<div class="roads" id="device_94_Roads">
+										<!-- ngRepeat: r in searchRoads(q) --><div class="road ng-scope Road" ng-class="getCurrentClass(q,r)" ng-repeat="r in searchRoads(q)">
+										<span id="device_94_CurrentNo14" ng-bind="getCurrent(q,r)" class="ng-binding">0.1</span>A
+									</div><!-- end ngRepeat: r in searchRoads(q) --><div class="road ng-scope road_low" ng-class="getCurrentClass(q,r)" ng-repeat="r in searchRoads(q)">
+										<span id="device_94_CurrentNo15" ng-bind="getCurrent(q,r)" class="ng-binding">0.1</span>A
+									</div><!-- end ngRepeat: r in searchRoads(q) --><div class="road ng-scope road_zero" ng-class="getCurrentClass(q,r)" ng-repeat="r in searchRoads(q)">
+										<span id="device_94_CurrentNo16" ng-bind="getCurrent(q,r)" class="ng-binding">0.0</span>A
+									</div><!-- end ngRepeat: r in searchRoads(q) -->
+								</div>
+							</td><!-- end ngRepeat: (index,q) in p.sub --><td class="conv ng-scope" ng-repeat="(index,q) in p.sub" ng-click="convClick(q)">
+								<div class="road1">
+									<img src="./images/Connection/conv.png" alt="" class="road1Img pos_ab">
+									<span class="name ng-binding" id="device_95_Device_Name" ng-bind="q.DeviceName">3#汇流箱</span>
+								</div>
+								<div class="roads" id="device_95_Roads">
+									<!-- ngRepeat: r in searchRoads(q) --><div class="road ng-scope Road" ng-class="getCurrentClass(q,r)" ng-repeat="r in searchRoads(q)">
+									<span id="device_95_CurrentNo14" ng-bind="getCurrent(q,r)" class="ng-binding">0.8</span>A
+								</div><!-- end ngRepeat: r in searchRoads(q) --><div class="road ng-scope Road" ng-class="getCurrentClass(q,r)" ng-repeat="r in searchRoads(q)">
+									<span id="device_95_CurrentNo15" ng-bind="getCurrent(q,r)" class="ng-binding">0.8</span>A
+								</div><!-- end ngRepeat: r in searchRoads(q) --><div class="road ng-scope road_zero" ng-class="getCurrentClass(q,r)" ng-repeat="r in searchRoads(q)">
+									<span id="device_95_CurrentNo16" ng-bind="getCurrent(q,r)" class="ng-binding">0.0</span>A
+								</div><!-- end ngRepeat: r in searchRoads(q) -->
+							</div>
+						</td><!-- end ngRepeat: (index,q) in p.sub --><td class="conv ng-scope" ng-repeat="(index,q) in p.sub" ng-click="convClick(q)">
+							<div class="road1">
+								<img src="./images/Connection/conv.png" alt="" class="road1Img pos_ab">
+								<span class="name ng-binding" id="device_96_Device_Name" ng-bind="q.DeviceName">4#汇流箱</span>
+							</div>
+							<div class="roads" id="device_96_Roads">
+								<!-- ngRepeat: r in searchRoads(q) --><div class="road ng-scope Road" ng-class="getCurrentClass(q,r)" ng-repeat="r in searchRoads(q)">
+								<span id="device_96_CurrentNo14" ng-bind="getCurrent(q,r)" class="ng-binding">0.8</span>A
+							</div><!-- end ngRepeat: r in searchRoads(q) --><div class="road ng-scope Road" ng-class="getCurrentClass(q,r)" ng-repeat="r in searchRoads(q)">
+								<span id="device_96_CurrentNo15" ng-bind="getCurrent(q,r)" class="ng-binding">0.8</span>A
+							</div><!-- end ngRepeat: r in searchRoads(q) --><div class="road ng-scope road_zero" ng-class="getCurrentClass(q,r)" ng-repeat="r in searchRoads(q)">
+								<span id="device_96_CurrentNo16" ng-bind="getCurrent(q,r)" class="ng-binding">0.0</span>A
+							</div><!-- end ngRepeat: r in searchRoads(q) -->
+						</div>
+					</td>
+
+				</tr>
+			</tbody></table>
+		</div>
+
+	</div>
+
+</div>
+
+<div class="swiper-slide">
+	<div class="onceConnectionTitle" style="height:25px;">
+		汇流箱
+	</div>
+	<div style="width:100%;height:88%;margin-top:4%;text-align: center;">
+		<div class="clearfix" style="width:48%;margin-right:1%;padding:3px 2% 6px;border:2px solid rgba(254,0,0,0.5);border-radius: 10px;display: flex;flex-direction: column; float:left;height:100%;">
+			<div style="background: url('./images/汇流箱logo.png') 0px 0px / 100% 100% no-repeat; width: 96%; height: 60px; font-size: 12px; color: red;line-height: 60px;text-align: center;">#1方阵#7汇流箱</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">上传时间</div>
+				<div class="w50 ">2018.5.20</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">母线电压</div>
+				<div class="w50 c_green">619V</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">总电流</div>
+				<div class="w50 c_red">8.56A</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">电流1</div>
+				<div class="w50 c_green">2.88A</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">电流2</div>
+				<div class="w50 c_green">2.90A</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">电流3</div>
+				<div class="w50 c_green">2.78A</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">电流4</div>
+				<div class="w50 c_red">0.00A</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">电流5</div>
+				<div class="w50 c_red">0.00A</div>
+			</div>
+		</div>
+		<div class="clearfix" style="width:48%;margin-left:1%;padding:3px 2% 6px;border:2px solid rgba(51,255,0,0.5);border-radius: 10px;display: flex;flex-direction: column; float:left;height:100%;">
+			<div style="background: url('./images/汇流箱logo.png') 0px 0px / 100% 100% no-repeat; width: 96%; height: 60px; font-size: 12px; color: red;line-height: 60px;text-align: center;">#1方阵#7汇流箱</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">上传时间</div>
+				<div class="w50 ">2018.5.20</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">母线电压</div>
+				<div class="w50 c_green">619V</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">总电流</div>
+				<div class="w50 c_green">17.12A</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">电流1</div>
+				<div class="w50 c_green">2.88A</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">电流2</div>
+				<div class="w50 c_green">2.90A</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">电流3</div>
+				<div class="w50 c_green">2.78A</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">电流4</div>
+				<div class="w50 c_green">2.88A</div>
+			</div>
+			<div style="width: 96%;font-size:13px;flex:1;">
+				<div class="w50 tr">电流5</div>
+				<div class="w50 c_green">2.90A</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="swiper-slide">
+	<div style="width:100%;height:96%;margin-top:4%;text-align: center;">
+		<div class="clearfix" style="width:100%; height:48%; background-color:rgba(0,0,0,0.2); margin-bottom:4%;border-radius:10px; padding:5px 0;padding-bottom:20px;">
+
+			<div class="" style="line-height:30px;width:100%;">
+				<span style="font-size:16px;">1#逆变器</span>
+				<span style="font-size:12px;color:#00FF01;">【运行中】</span>
+			</div>
+
+			<div style="width:40%;float:left;" class="clearfix">
+				<img src="./images/inv.png" alt="" style="width:70%;margin-top:10%;margin-left:15%;vertical-align:middle;">
+			</div>
+			<div class="clearfix" style="width:60%;height:100%;float:left;display:flex;flex-direction:column;">
+				<div class="inv" style="">
+					<span style="font-size:12px;">直流电压:</span>
+					<span style="font-size:12px;color:#00FF01;font-weight:600;">625 V</span>
+				</div>
+				<div class="inv" style="">
+					<span style="font-size:12px;">直流电流:</span>
+					<span style="font-size:12px;color:#00FF01;font-weight:600;">297 A</span>
+				</div>
+				<div class="inv" style="">
+					<span style="font-size:12px;">功率:</span>
+					<span style="font-size:12px;color:#00FF01;font-weight:600;">181 kW</span>
+				</div>
+				<div class="inv" style="">
+					<span style="font-size:12px;">日发电:</span>
+					<span style="font-size:12px;color:#00FF01;font-weight:600;">418 kW·h</span>
+				</div>
+				<div class="inv" style="">
+					<img src="./images/通讯1.png" alt="" style="display:inline-block;margin-right:15px;margin-left:15px;width:26px;height:27px;">
+					<img src="./images/横线1.png" alt="" style="display:inline-block;margin-right:15px;width:26px;height:27px;">
+					<img src="./images/效率低1.png" alt="" style="display:inline-block;margin-right:15px;width:26px;height:27px;">
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="clearfix" style="width:100%; height:48%; background-color:rgba(0,0,0,0.2); margin-bottom:0%;border-radius:10px; padding:5px 0;padding-bottom:25px;">
+
+			<div class="" style="line-height:30px;width:100%;">
+				<span style="font-size:16px;">2#逆变器</span>
+				<span style="font-size:12px;color:yellow;">【异常】</span>
+			</div>
+
+			<div style="width:40%;float:left;" class="clearfix">
+				<img src="./images/inv.png" alt="" style="width:70%;margin-top:10%;margin-left:15%;vertical-align:middle;">
+			</div>
+			<div class="" style="width:60%;height:100%;float:left;">
+				<div class="inv" style="line-height:20px;">
+					<span style="font-size:12px;">直流电压:</span>
+					<span style="font-size:12px;color:#00FF01;font-weight:600;">625 V</span>
+				</div>
+				<div class="inv" style="line-height:20px;">
+					<span style="font-size:12px;">直流电流:</span>
+					<span style="font-size:12px;color:red;font-weight:600;">0 A</span>
+				</div>
+				<div class="inv" style="line-height:20px;">
+					<span style="font-size:12px;">功率:</span>
+					<span style="font-size:12px;color:#00FF01;font-weight:600;">181 kW</span>
+				</div>
+				<div class="inv" style="line-height:20px;">
+					<span style="font-size:12px;">日发电:</span>
+					<span style="font-size:12px;color:#00FF01;font-weight:600;">418 kW·h</span>
+				</div>
+
+				<div class="inv" style="line-height:20px;">
+					<img src="./images/通讯.png" alt="" style="display:inline-block;margin-right:15px;margin-left:15px;width:26px;height:27px;">
+					<img src="./images/横线.png" alt="" style="display:inline-block;margin-right:15px;width:26px;height:27px;">
+					<img src="./images/效率低1.png" alt="" style="display:inline-block;margin-right:15px;width:26px;height:27px;">
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+</div>
+
+</div>
+</div>
+</div>
+
+		<!-- 右1 -->
+		<div class="right1 pos_ab">
+			<canvas id="right1" class="pos_ab"  style=""></canvas>
+			<!-- <img src="./images/itemTitle.png" alt="" class="pos_ab itemTitle"> -->
+			<div class="chartTitle pos_ab">发电量预测</div>
+			<div class="underLine"></div>
+			<div class="chartContainer pos_ab" id="right1_con" style="height:80%;top:16%;width:94%;left:3%;">
+
+			</div>
+		</div>
+
+		<!-- 右2 -->
+		<div class="right2 pos_ab">
+			<canvas id="right2" class="pos_ab"  style=""></canvas>
+			<!-- <img src="./images/itemTitle.png" alt="" class="pos_ab itemTitle"> -->
+			<div class="chartTitle pos_ab">汇流箱离散率</div>
+			<div class="underLine"></div>
+			<div class="chartContainer pos_ab" id="right2_con" style="width:92%;left:4%;height:78%;">
+
+			</div>
+		</div>
+
+		<!-- 右3 -->
+		<div class="right3 pos_ab">
+			<canvas id="right3" class="pos_ab"  style=""></canvas>
+			<!-- <img src="./images/itemTitle.png" alt="" class="pos_ab itemTitle"> -->
+			<div class="chartTitle pos_ab">实证监测</div>
+			<div class="underLine"></div>
+			<div class="chartContainer pos_ab" id="right3_con" style="height:90%;top:8%;width:92%;left:4%;">
+				<div id="demonstration1" style="height:46%;"></div>
+				<div id="demonstration2" style="height:54%;"></div>
+			</div>
+		</div>
+		<!-- 中间 -->
+		<div class="center1 pos_ab" style="display: none">
+			<canvas id="center1" class="pos_ab"  style=""></canvas>
+			<img src="./images/itemTitle.png" alt="" class="pos_ab itemTitle">
+			<div class="chartContainer pos_ab" id="center1_con"></div>
+		</div>
+
+	</div>
+
+
+	<script src="./js/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script src="./js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="./js/jquery.slimscroll.min.js" type="text/javascript"></script>
+	  <script src="./js/echarts.js" type="text/javascript"></script>
+	  <script src="./js/highcharts.js" type="text/javascript"></script>
+	  <script src="./js/jquery.cloud9carousel.js"></script>
+	  <script src="./js/jQuery.slideNumber.js"></script>
+	  <!-- <script src="./js/reflection.js"></script> -->
+	  <script src="./js/drawFrame.js"></script>
+	  <script src="./js/swiper-3.4.2.min.js"></script>
+	  <script src="./js/functions/stationEfficient.js"></script>
+	  <script src="./js/functions/defaultAnalyze.js"></script>
+	  <script src="./js/functions/demonstration.js"></script>
+	  <script src="./js/functions/ConvergenceBoxDiscreteRate.js"></script>
+	  <script src="./js/functions/kWh.js"></script>
+	  <script src="./js/functions/forecast.js"></script>
+	  <script src="./js/functions/health.js"></script>
+	  <script src="./js/functions/MWKWh.js"></script>
+	  <script src="./js/functions/cleanEarnings.js"></script>
+
+	  <script src="./js/index.js"></script>
+</body>
+</html>
